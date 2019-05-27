@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Posty</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Logo</h1>
+      </div>
+      <div>
+        <a href="newpost.html">New+</a>
+      </div>
+    </header>
+    <main>
+      {% for post in posts %}
+      <article>
+        <div>
+          <img src="{{post.photo_url}}" height="250px">
+        </div>
+        <div>
+          <h2>{{post.name}}</h2>
+          <p>{{post.body}}</p>
+        </div>
+        <div class="">
+          <a href="#">Edit</a>|
+          <a href="#">Delete</a>
+        </div>
+      </article>
+      {% endfor %}
+    </main>
+
+  </body>
+</html>
