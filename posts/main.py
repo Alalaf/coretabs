@@ -21,7 +21,7 @@ posts = post_store.get_all()
 
 @app.route('/show_posts')
 def show_posts():
-    return render_template('index.html', posts)
+    return render_template('index.html', posts=posts)
 
 
 app.run()
