@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, redirect
 from store import Post, PostStore
 app = Flask(__name__)
 
@@ -19,9 +19,25 @@ post_store.add(dummy_posts[1])
 posts = post_store.get_all()
 
 
-@app.route('/show_posts')
+@app.route('/')
 def show_posts():
     return render_template('index.html', posts=posts)
 
+
+app.current_id = 3
+
+
+@app.route('/add_post/', methods=['GET', 'POST'])
+def add_post():
+    if request.method == 'POST':
+        new_post = Post(id=app.current_id,
+                    photo_url=request.form['photo_url'],
+                    name=request.form['name'],
+                    body=request.form['body'])
+        post_store.add(new_post)
+        app.current_id += 1
+        return redirect(url_for('show_posts'))
+    elif request.method == 'GET':
+        return render_template('add_post.html')
 
 app.run()
