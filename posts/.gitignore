@@ -1,5 +1,4 @@
-posts/venv/
+venv/
 .vs/
 .idea/
 __pycache__/
-ATM_Withdarws/
