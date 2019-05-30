@@ -1,5 +1,5 @@
-**/ posts/venv/
-  .vs/
-  .idea/
-  __pycache__/
-  ATM_Withdarws/
+**/venv/
+.vs/
+**/ .idea/
+__pycache__/
+ATM_Withdarws/
