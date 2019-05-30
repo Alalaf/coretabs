@@ -46,4 +46,19 @@ def delete_post(id):
     post_store.delete(id)
     return redirect(url_for('show_posts'))
 
+
+@app.route('/update_post/<int:id>', methods=['GET', 'POST'])
+def update_post(id):
+    if request.method == 'POST':
+        update_fields = {
+            'photo_url': request.form['photo_url'],
+            'name': request.form['name'],
+            'body': request.form['body']
+        }
+        post_store.update(id, update_fields)
+        return redirect(url_for('show_posts'))
+    elif request.method == 'GET':
+        post = post_store.get_by_id(id)
+        return render_template('update_post.html', post=post)
+
 app.run()
