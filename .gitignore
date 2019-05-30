@@ -1,4 +1,4 @@
- coretabs/ posts/venv/
+coretabs/ posts/venv/
   .vs/
   .idea/
   __pycache__/
