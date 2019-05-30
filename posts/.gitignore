@@ -1,5 +1,5 @@
 venv/
 .vs/
 .idea/
-__pycache__
+__pycache__/
 ATM_Withdarws/
