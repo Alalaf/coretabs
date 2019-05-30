@@ -1,0 +1,5 @@
+  posts/venv/
+  .vs/
+  .idea/
+  __pycache__/
+  ATM_Withdarws/
