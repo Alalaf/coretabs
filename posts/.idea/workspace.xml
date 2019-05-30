@@ -143,9 +143,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="86" width="1260" height="827" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2569558" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2569558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
